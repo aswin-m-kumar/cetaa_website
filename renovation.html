@@ -15,33 +15,38 @@
 
     <main class="flex-grow">
         <!-- Renovation Hero -->
-        <section class="bg-gray-900 text-white pt-24 pb-32 relative overflow-hidden">
-             <div class="absolute inset-0 opacity-20">
-                 <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                   <path d="M0 100 C 20 0 50 0 100 100 Z" fill="#800000" />
-                 </svg>
+        <section class="relative pt-32 pb-40 overflow-hidden">
+             <!-- Background -->
+             <div class="absolute inset-0 bg-maroon">
+                 <div class="absolute inset-0 bg-[url('assets/college.jpg')] opacity-20 bg-cover bg-center mix-blend-overlay"></div>
+                 <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-maroon/90"></div>
              </div>
               
              <div class="max-w-7xl mx-auto px-4 relative z-10 text-center reveal-up">
-                <div class="inline-block px-4 py-1 mb-6 border border-yellow-500 rounded-full text-yellow-400 text-sm font-bold tracking-widest uppercase">
+                <div class="inline-block px-6 py-2 mb-8 rounded-full border border-gold/50 bg-gold/10 backdrop-blur-md text-gold-light text-sm font-bold tracking-[0.2em] uppercase">
                   Vision 2026
                 </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6">Reimagining Our Space</h1>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-                  From the Reception to the Hall, we are upgrading CETAA's infrastructure to match the global stature of our alumni.
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight">Reimagining <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-100">Our Space</span></h1>
+                <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-16 font-light leading-relaxed">
+                  Upgrading CETAA's infrastructure to match the global stature of our alumni. <br/>From the Reception to the Hall, every corner matters.
                 </p>
                 
                 <!-- Main Progress Bar -->
-                <div class="max-w-2xl mx-auto bg-gray-800 rounded-xl p-6 border border-gray-700 shadow-2xl">
-                  <div class="flex justify-between items-end mb-2">
-                    <div>
-                      <span class="text-3xl font-bold text-white">₹28.5L</span>
-                      <span class="text-sm text-gray-400 ml-2">raised of ₹58L Goal</span>
+                <div class="max-w-3xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-2xl relative overflow-hidden group hover:border-gold/30 transition-colors duration-500">
+                  <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent opacity-50"></div>
+                  <div class="flex justify-between items-end mb-4">
+                    <div class="text-left">
+                      <span class="block text-4xl font-bold text-white mb-1">₹28.5L</span>
+                      <span class="text-sm text-gray-400 font-medium uppercase tracking-wider">Raised of ₹58L Goal</span>
                     </div>
-                    <span class="text-yellow-500 font-bold">48%</span>
+                    <div class="text-right">
+                         <span class="block text-4xl font-bold text-gold">48%</span>
+                    </div>
                   </div>
-                  <div class="w-full bg-gray-700 rounded-full h-3 overflow-hidden">
-                    <div class="bg-gradient-to-r from-yellow-600 to-yellow-400 h-3 rounded-full animate-pulse" style="width: 48%"></div>
+                  <div class="w-full bg-gray-700/50 rounded-full h-4 overflow-hidden">
+                    <div class="bg-gradient-to-r from-gold to-yellow-300 h-4 rounded-full relative">
+                        <div class="absolute inset-0 bg-white/20 animate-[shimmer_2s_infinite]"></div>
+                    </div>
                   </div>
                 </div>
              </div>
@@ -50,192 +55,204 @@
         <!-- Projects Grid -->
         <section class="relative -mt-20 px-4 pb-20 z-20">
             <div class="max-w-7xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     
                     <!-- Card 1: CETAA Hall -->
-                    <div class="before-after-card bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover-scale reveal-up" style="transition-delay: 100ms;">
-                        <div class="relative h-72 bg-gray-200">
+                    <div class="before-after-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-up" style="transition-delay: 100ms;">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
                              <!-- Images -->
                              <div class="absolute inset-0">
-                                 <img src="assets/CETAAHALLCURRENT.png" alt="CETAA Hall Current" class="w-full h-full object-cover transition-opacity duration-500 img-current">
-                                 <img src="assets/CETAAHALLproposed.png" alt="CETAA Hall Proposed" class="w-full h-full object-cover transition-opacity duration-500 opacity-0 absolute inset-0 img-proposed">
+                                 <img src="assets/CETAAHALLCURRENT.png" alt="CETAA Hall Current" class="w-full h-full object-cover transition-opacity duration-700 img-current scale-100 group-hover:scale-105 transition-transform">
+                                 <img src="assets/CETAAHALLproposed.png" alt="CETAA Hall Proposed" class="w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute inset-0 img-proposed scale-100 group-hover:scale-105 transition-transform">
                              </div>
                              
                              <!-- Toggle -->
-                             <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 flex items-center gap-3 z-20">
-                                 <span class="label-current text-xs font-bold text-white">CURRENT</span>
-                                 <button class="toggle-btn w-12 h-6 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-red-500">
-                                     <div class="toggle-slider bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
+                             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-5 py-2.5 flex items-center gap-4 z-20 border border-white/10 shadow-lg">
+                                 <span class="label-current text-xs font-bold text-white tracking-wider">CURRENT</span>
+                                 <button class="toggle-btn w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-maroon hover:bg-red-700">
+                                     <div class="toggle-slider bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
                                  </button>
-                                 <span class="label-proposed text-xs font-bold text-gray-400">PROPOSED</span>
+                                 <span class="label-proposed text-xs font-bold text-gray-400 tracking-wider">PROPOSED</span>
                              </div>
 
-                             <div class="absolute top-4 right-4 z-20 bg-white/95 text-gray-900 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm">
+                             <div class="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur text-maroon px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border border-maroon/10">
                                 Est: ₹25 Lakhs
                              </div>
                         </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <div class="p-2 rounded-lg bg-red-50 text-red-900 mr-3">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-maroon/5 flex items-center justify-center text-maroon mr-4">
                                     <i data-lucide="users" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">CETAA Hall</h3>
-                                    <p class="text-xs text-gray-500 italic">Toggle image to see transformation</p>
+                                    <h3 class="text-2xl font-bold text-gray-900">CETAA Hall</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide font-medium mt-1">Auditorium Upgrade</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            <p class="text-gray-600 leading-relaxed mb-6">
                                 Transforming the classic auditorium into a world-class convention center. Upgrades include wood-panel acoustics, modern HVAC, and ergonomic beige seating to replace the dated red chairs.
                             </p>
-                            <div class="pt-4 border-t border-gray-100">
-                                <div class="w-full bg-gray-100 rounded-full h-2 mb-2">
-                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 45%"></div>
+                            <div class="pt-6 border-t border-gray-100">
+                                <div class="flex justify-between items-center text-sm font-bold text-gray-700 mb-2">
+                                    <span>Funded</span>
+                                    <span>45%</span>
                                 </div>
-                                <div class="flex justify-between text-xs font-medium text-gray-500">
-                                    <span>45% Funded</span>
-                                    <span class="text-red-900 cursor-pointer hover:underline">View Blueprint &rarr;</span>
+                                <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+                                    <div class="bg-gold h-2 rounded-full" style="width: 45%"></div>
                                 </div>
+                                <button class="text-maroon text-sm font-bold hover:text-gold transition-colors flex items-center gap-1 group/btn">
+                                    View Blueprint <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 2: Reception Lounge -->
-                    <div class="before-after-card bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover-scale reveal-up" style="transition-delay: 200ms;">
-                        <div class="relative h-72 bg-gray-200">
+                    <div class="before-after-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-up" style="transition-delay: 200ms;">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
                              <!-- Images -->
                              <div class="absolute inset-0">
-                                 <img src="assets/receptionareacurrent.png" alt="Reception Current" class="w-full h-full object-cover transition-opacity duration-500 img-current">
-                                 <img src="assets/receptionareaproposed.png" alt="Reception Proposed" class="w-full h-full object-cover transition-opacity duration-500 opacity-0 absolute inset-0 img-proposed">
+                                 <img src="assets/receptionareacurrent.png" alt="Reception Current" class="w-full h-full object-cover transition-opacity duration-700 img-current scale-100 group-hover:scale-105 transition-transform">
+                                 <img src="assets/receptionareaproposed.png" alt="Reception Proposed" class="w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute inset-0 img-proposed scale-100 group-hover:scale-105 transition-transform">
                              </div>
                              
                              <!-- Toggle -->
-                             <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 flex items-center gap-3 z-20">
-                                 <span class="label-current text-xs font-bold text-white">CURRENT</span>
-                                 <button class="toggle-btn w-12 h-6 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-red-500">
-                                     <div class="toggle-slider bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
+                             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-5 py-2.5 flex items-center gap-4 z-20 border border-white/10 shadow-lg">
+                                 <span class="label-current text-xs font-bold text-white tracking-wider">CURRENT</span>
+                                 <button class="toggle-btn w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-maroon hover:bg-red-700">
+                                     <div class="toggle-slider bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
                                  </button>
-                                 <span class="label-proposed text-xs font-bold text-gray-400">PROPOSED</span>
+                                 <span class="label-proposed text-xs font-bold text-gray-400 tracking-wider">PROPOSED</span>
                              </div>
 
-                             <div class="absolute top-4 right-4 z-20 bg-white/95 text-gray-900 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm">
+                             <div class="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur text-maroon px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border border-maroon/10">
                                 Est: ₹15 Lakhs
                              </div>
                         </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <div class="p-2 rounded-lg bg-red-50 text-red-900 mr-3">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-maroon/5 flex items-center justify-center text-maroon mr-4">
                                     <i data-lucide="building" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Reception Lounge</h3>
-                                    <p class="text-xs text-gray-500 italic">Toggle image to see transformation</p>
+                                    <h3 class="text-2xl font-bold text-gray-900">Reception Lounge</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide font-medium mt-1">Lounge Upgrade</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                Converting the transit corridor into a premium alumni lounge. The plan introduces a modern reception desk, zoned seating, marble flooring, and decorative lighting to replace the sparse pillar hall.
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Converting the transit corridor into a premium alumni lounge. The plan introduces a modern reception desk, zoned seating, marble flooring, and decorative lighting.
                             </p>
-                            <div class="pt-4 border-t border-gray-100">
-                                <div class="w-full bg-gray-100 rounded-full h-2 mb-2">
-                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 20%"></div>
+                            <div class="pt-6 border-t border-gray-100">
+                                <div class="flex justify-between items-center text-sm font-bold text-gray-700 mb-2">
+                                    <span>Funded</span>
+                                    <span>20%</span>
                                 </div>
-                                <div class="flex justify-between text-xs font-medium text-gray-500">
-                                    <span>20% Funded</span>
-                                    <span class="text-red-900 cursor-pointer hover:underline">View Blueprint &rarr;</span>
+                                <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+                                    <div class="bg-gold h-2 rounded-full" style="width: 20%"></div>
                                 </div>
+                                <button class="text-maroon text-sm font-bold hover:text-gold transition-colors flex items-center gap-1 group/btn">
+                                    View Blueprint <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 3: CETAA Office -->
-                    <div class="before-after-card bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover-scale reveal-up" style="transition-delay: 300ms;">
-                        <div class="relative h-72 bg-gray-200">
+                    <div class="before-after-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-up" style="transition-delay: 300ms;">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
                              <!-- Images -->
                              <div class="absolute inset-0">
-                                 <img src="assets/CETAAofficecurrent.png" alt="Office Current" class="w-full h-full object-cover transition-opacity duration-500 img-current">
-                                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Proposed" class="w-full h-full object-cover transition-opacity duration-500 opacity-0 absolute inset-0 img-proposed">
+                                 <img src="assets/CETAAofficecurrent.png" alt="Office Current" class="w-full h-full object-cover transition-opacity duration-700 img-current scale-100 group-hover:scale-105 transition-transform">
+                                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Proposed" class="w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute inset-0 img-proposed scale-100 group-hover:scale-105 transition-transform">
                              </div>
                              
                              <!-- Toggle -->
-                             <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 flex items-center gap-3 z-20">
-                                 <span class="label-current text-xs font-bold text-white">CURRENT</span>
-                                 <button class="toggle-btn w-12 h-6 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-red-500">
-                                     <div class="toggle-slider bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
+                             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-5 py-2.5 flex items-center gap-4 z-20 border border-white/10 shadow-lg">
+                                 <span class="label-current text-xs font-bold text-white tracking-wider">CURRENT</span>
+                                 <button class="toggle-btn w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-maroon hover:bg-red-700">
+                                     <div class="toggle-slider bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
                                  </button>
-                                 <span class="label-proposed text-xs font-bold text-gray-400">PROPOSED</span>
+                                 <span class="label-proposed text-xs font-bold text-gray-400 tracking-wider">PROPOSED</span>
                              </div>
 
-                             <div class="absolute top-4 right-4 z-20 bg-white/95 text-gray-900 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm">
+                             <div class="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur text-maroon px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border border-maroon/10">
                                 Est: ₹10 Lakhs
                              </div>
                         </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <div class="p-2 rounded-lg bg-red-50 text-red-900 mr-3">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-maroon/5 flex items-center justify-center text-maroon mr-4">
                                     <i data-lucide="target" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">CETAA Office</h3>
-                                    <p class="text-xs text-gray-500 italic">Toggle image to see transformation</p>
+                                    <h3 class="text-2xl font-bold text-gray-900">CETAA Office</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide font-medium mt-1">Operational Hub</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                Modernizing the operational hub. We aim to declutter the workspace, introducing digital archives and modular workstations to improve efficiency for the secretariat.
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Modernizing the operational hub. We aim to declutter the workspace, introducing digital archives and modular workstations to improve efficiency.
                             </p>
-                            <div class="pt-4 border-t border-gray-100">
-                                <div class="w-full bg-gray-100 rounded-full h-2 mb-2">
-                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 10%"></div>
+                            <div class="pt-6 border-t border-gray-100">
+                                <div class="flex justify-between items-center text-sm font-bold text-gray-700 mb-2">
+                                    <span>Funded</span>
+                                    <span>10%</span>
                                 </div>
-                                <div class="flex justify-between text-xs font-medium text-gray-500">
-                                    <span>10% Funded</span>
-                                    <span class="text-red-900 cursor-pointer hover:underline">View Blueprint &rarr;</span>
+                                <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+                                    <div class="bg-gold h-2 rounded-full" style="width: 10%"></div>
                                 </div>
+                                <button class="text-maroon text-sm font-bold hover:text-gold transition-colors flex items-center gap-1 group/btn">
+                                    View Blueprint <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 4: Entrance Ramp -->
-                    <div class="before-after-card bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover-scale reveal-up" style="transition-delay: 400ms;">
-                        <div class="relative h-72 bg-gray-200">
+                    <div class="before-after-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 group reveal-up" style="transition-delay: 400ms;">
+                        <div class="relative h-80 bg-gray-200 overflow-hidden">
                              <!-- Images -->
                              <div class="absolute inset-0">
-                                 <img src="assets/rampcurrent.png" alt="Ramp Current" class="w-full h-full object-cover transition-opacity duration-500 img-current">
-                                 <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Ramp Proposed" class="w-full h-full object-cover transition-opacity duration-500 opacity-0 absolute inset-0 img-proposed">
+                                 <img src="assets/rampcurrent.png" alt="Ramp Current" class="w-full h-full object-cover transition-opacity duration-700 img-current scale-100 group-hover:scale-105 transition-transform">
+                                 <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Ramp Proposed" class="w-full h-full object-cover transition-opacity duration-700 opacity-0 absolute inset-0 img-proposed scale-100 group-hover:scale-105 transition-transform">
                              </div>
                              
                              <!-- Toggle -->
-                             <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-4 py-2 flex items-center gap-3 z-20">
-                                 <span class="label-current text-xs font-bold text-white">CURRENT</span>
-                                 <button class="toggle-btn w-12 h-6 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-red-500">
-                                     <div class="toggle-slider bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
+                             <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 backdrop-blur-md rounded-full px-5 py-2.5 flex items-center gap-4 z-20 border border-white/10 shadow-lg">
+                                 <span class="label-current text-xs font-bold text-white tracking-wider">CURRENT</span>
+                                 <button class="toggle-btn w-14 h-7 rounded-full p-1 transition-colors duration-300 focus:outline-none bg-maroon hover:bg-red-700">
+                                     <div class="toggle-slider bg-white w-5 h-5 rounded-full shadow-md transform transition-transform duration-300 translate-x-0"></div>
                                  </button>
-                                 <span class="label-proposed text-xs font-bold text-gray-400">PROPOSED</span>
+                                 <span class="label-proposed text-xs font-bold text-gray-400 tracking-wider">PROPOSED</span>
                              </div>
 
-                             <div class="absolute top-4 right-4 z-20 bg-white/95 text-gray-900 px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider shadow-sm">
+                             <div class="absolute top-6 right-6 z-20 bg-white/90 backdrop-blur text-maroon px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm border border-maroon/10">
                                 Est: ₹8 Lakhs
                              </div>
                         </div>
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <div class="p-2 rounded-lg bg-red-50 text-red-900 mr-3">
+                        <div class="p-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 rounded-xl bg-maroon/5 flex items-center justify-center text-maroon mr-4">
                                     <i data-lucide="arrow-right" class="w-6 h-6"></i>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-900">Entrance Ramp</h3>
-                                    <p class="text-xs text-gray-500 italic">Toggle image to see transformation</p>
+                                    <h3 class="text-2xl font-bold text-gray-900">Entrance Ramp</h3>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wide font-medium mt-1">Accessibility</p>
                                 </div>
                             </div>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                Safety and Inclusivity First. Reconstruction of the damaged entrance area into a fully compliant, anti-skid ramp with stainless steel handrails for our senior alumni.
+                            <p class="text-gray-600 leading-relaxed mb-6">
+                                Safety and Inclusivity First. Reconstruction of the damaged entrance area into a fully compliant, anti-skid ramp with stainless steel handrails used by all.
                             </p>
-                            <div class="pt-4 border-t border-gray-100">
-                                <div class="w-full bg-gray-100 rounded-full h-2 mb-2">
-                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 5%"></div>
+                            <div class="pt-6 border-t border-gray-100">
+                                <div class="flex justify-between items-center text-sm font-bold text-gray-700 mb-2">
+                                    <span>Funded</span>
+                                    <span>5%</span>
                                 </div>
-                                <div class="flex justify-between text-xs font-medium text-gray-500">
-                                    <span>5% Funded</span>
-                                    <span class="text-red-900 cursor-pointer hover:underline">View Blueprint &rarr;</span>
+                                <div class="w-full bg-gray-100 rounded-full h-2 mb-4">
+                                    <div class="bg-gold h-2 rounded-full" style="width: 5%"></div>
                                 </div>
+                                <button class="text-maroon text-sm font-bold hover:text-gold transition-colors flex items-center gap-1 group/btn">
+                                    View Blueprint <i data-lucide="arrow-right" class="w-4 h-4 group-hover/btn:translate-x-1 transition-transform"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -245,68 +262,77 @@
         </section>
 
         <!-- Donation Form -->
-        <section class="py-20 bg-white">
-            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-16">
+        <section class="py-24 bg-white relative">
+            <div class="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-gray-50 to-white pointer-events-none"></div>
+            <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-20">
               
               <!-- Info Side -->
               <div class="md:w-1/2">
                 <div class="mb-12 reveal-left">
-                  <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Support the Cause</h2>
-                  <div class="h-1 w-20 mb-6 bg-gold" style="background-color: #d4af37;"></div>
-                  <p class="text-gray-600 max-w-2xl text-lg">Your contribution builds the foundation for future interactions. All donations are eligible for tax exemption.</p>
+                  <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Support the <span class="text-maroon">Cause</span></h2>
+                  <div class="h-1.5 w-24 mb-8 bg-gold"></div>
+                  <p class="text-gray-600 max-w-2xl text-lg leading-relaxed">
+                      Your contribution builds the foundation for future generations. Join hands with fellow alumni to create a lasting legacy. All donations are 100% tax-deductible.
+                  </p>
                 </div>
                 
-                <div class="space-y-6 reveal-left" style="transition-delay: 200ms;">
-                  <div class="flex gap-4 items-start">
-                    <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
-                      <i data-lucide="credit-card" class="w-6 h-6 text-yellow-700"></i>
+                <div class="space-y-8 reveal-left" style="transition-delay: 200ms;">
+                  <div class="flex gap-6 items-start group">
+                    <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/20 transition-colors">
+                      <i data-lucide="shield-check" class="w-7 h-7 text-maroon"></i>
                     </div>
                     <div>
-                      <h4 class="text-lg font-bold text-gray-900">Secure Payment</h4>
-                      <p class="text-gray-600 text-sm">We use bank-grade encryption for all transactions.</p>
+                      <h4 class="text-xl font-bold text-gray-900 mb-2">Secure Payment Gateway</h4>
+                      <p class="text-gray-500 text-base leading-relaxed">We use AES-256 encryption. Your financial data is never stored on our servers.</p>
                     </div>
                   </div>
-                  <div class="flex gap-4 items-start">
-                    <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
-                      <i data-lucide="mail" class="w-6 h-6 text-red-900"></i>
+                  <div class="flex gap-6 items-start group">
+                    <div class="w-14 h-14 rounded-2xl bg-maroon/5 flex items-center justify-center flex-shrink-0 group-hover:bg-maroon/10 transition-colors">
+                      <i data-lucide="file-check" class="w-7 h-7 text-maroon"></i>
                     </div>
                     <div>
-                      <h4 class="text-lg font-bold text-gray-900">Instant Receipt</h4>
-                      <p class="text-gray-600 text-sm">Receive your 80G compliant receipt immediately via email.</p>
+                      <h4 class="text-xl font-bold text-gray-900 mb-2">Instant 80G Receipt</h4>
+                      <p class="text-gray-500 text-base leading-relaxed">Receive your tax exemption certificate immediately via email upon successful donation.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <!-- Form Side -->
-              <div class="md:w-1/2 bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-lg reveal-right">
-                 <h3 class="text-2xl font-bold text-gray-900 mb-6">Contribution Form</h3>
-                 <form class="space-y-4">
-                    <div class="grid grid-cols-2 gap-4">
+              <div class="md:w-1/2 bg-white rounded-3xl p-10 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.05)] reveal-right relative">
+                 <div class="absolute top-0 right-0 p-4 opacity-5">
+                     <i data-lucide="heart" class="w-32 h-32"></i>
+                 </div>
+                 <h3 class="text-2xl font-bold text-gray-900 mb-8 relative z-10">Make a Contribution</h3>
+                 <form class="space-y-5 relative z-10">
+                    <div class="grid grid-cols-2 gap-5">
                       <div>
-                        <label class="text-xs font-bold text-gray-500 uppercase">First Name</label>
-                        <input type="text" class="w-full p-3 rounded border border-gray-300 focus:border-red-900 outline-none hover:border-red-900 transition-colors" />
+                        <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">First Name</label>
+                        <input type="text" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:border-maroon focus:ring-1 focus:ring-maroon outline-none transition-all placeholder-gray-400" placeholder="John" />
                       </div>
                       <div>
-                        <label class="text-xs font-bold text-gray-500 uppercase">Last Name</label>
-                        <input type="text" class="w-full p-3 rounded border border-gray-300 focus:border-red-900 outline-none hover:border-red-900 transition-colors" />
+                        <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Last Name</label>
+                        <input type="text" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:border-maroon focus:ring-1 focus:ring-maroon outline-none transition-all placeholder-gray-400" placeholder="Doe" />
                       </div>
                     </div>
                     <div>
-                      <label class="text-xs font-bold text-gray-500 uppercase">Graduation Year & Branch</label>
-                      <input type="text" class="w-full p-3 rounded border border-gray-300 focus:border-red-900 outline-none hover:border-red-900 transition-colors" placeholder="e.g. 1995 Mechanical" />
+                      <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Graduation Details</label>
+                      <input type="text" class="w-full p-4 rounded-xl bg-gray-50 border border-gray-200 focus:border-maroon focus:ring-1 focus:ring-maroon outline-none transition-all placeholder-gray-400" placeholder="e.g. 1995 Mechanical" />
                     </div>
                     <div>
-                      <label class="text-xs font-bold text-gray-500 uppercase">Donation Amount (₹)</label>
-                      <div class="grid grid-cols-3 gap-2 mt-1 mb-2">
-                        <button class="amount-btn py-2 text-sm font-medium rounded border bg-white text-gray-600 border-gray-300 hover:border-red-900 transition-colors" data-amount="5000">₹5000</button>
-                        <button class="amount-btn py-2 text-sm font-medium rounded border bg-white text-gray-600 border-gray-300 hover:border-red-900 transition-colors" data-amount="10000">₹10000</button>
-                        <button class="amount-btn py-2 text-sm font-medium rounded border bg-white text-gray-600 border-gray-300 hover:border-red-900 transition-colors" data-amount="25000">₹25000</button>
+                      <label class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 block">Donation Amount</label>
+                      <div class="grid grid-cols-3 gap-3 mb-4">
+                        <button class="amount-btn py-3 text-sm font-bold rounded-xl border border-gray-200 text-gray-600 hover:border-maroon hover:text-maroon transition-all bg-white" data-amount="5000">₹5,000</button>
+                        <button class="amount-btn py-3 text-sm font-bold rounded-xl border border-gray-200 text-gray-600 hover:border-maroon hover:text-maroon transition-all bg-white" data-amount="10000">₹10,000</button>
+                        <button class="amount-btn py-3 text-sm font-bold rounded-xl border border-gray-200 text-gray-600 hover:border-maroon hover:text-maroon transition-all bg-white" data-amount="25000">₹25,000</button>
                       </div>
-                      <input id="custom-amount" type="number" class="w-full p-3 rounded border border-gray-300 focus:border-red-900 outline-none hover:border-red-900 transition-colors" placeholder="Enter custom amount" />
+                      <div class="relative">
+                          <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 font-bold">₹</span>
+                          <input id="custom-amount" type="number" class="w-full p-4 pl-8 rounded-xl bg-gray-50 border border-gray-200 focus:border-maroon focus:ring-1 focus:ring-maroon outline-none transition-all placeholder-gray-400 font-bold text-gray-900" placeholder="Enter custom amount" />
+                      </div>
                     </div>
-                    <button id="donate-btn" class="w-full justify-center mt-4 px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 bg-maroon text-white hover:bg-red-800">
-                      Donate Now
+                    <button id="donate-btn" class="w-full justify-center mt-6 px-8 py-4 rounded-xl font-bold transition-all duration-300 flex items-center gap-3 shadow-xl hover:shadow-2xl transform hover:-translate-y-1 bg-maroon text-white hover:bg-red-900">
+                      Proceed to Pay <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </button>
                  </form>
               </div>

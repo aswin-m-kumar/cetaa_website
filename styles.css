@@ -1,15 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap');
 
-body {
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scroll from animations */
+:root {
+    --color-maroon: #800000;
+    --color-maroon-dark: #600000;
+    --color-gold: #d4af37;
+    --color-gold-light: #f3e5ab;
+    --color-gray-dark: #1a1a1a;
+    --color-gray-light: #f8f9fa;
+    --color-text: #2d3748;
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
 }
 
-/* Animations Logic */
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    overflow-x: hidden;
+    background-color: var(--color-gray-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans); /* Can use serif for headings if desired */
+}
+
+/* Utilities */
+.text-maroon { color: var(--color-maroon); }
+.bg-maroon { background-color: var(--color-maroon); }
+.text-gold { color: var(--color-gold); }
+.bg-gold { background-color: var(--color-gold); }
+.border-gold { border-color: var(--color-gold); }
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
 .reveal-up {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 .reveal-up.visible {
     opacity: 1;
@@ -18,8 +58,8 @@ body {
 
 .reveal-left {
     opacity: 0;
-    transform: translateX(-30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateX(-50px);
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
 }
 .reveal-left.visible {
     opacity: 1;
@@ -28,64 +68,48 @@ body {
 
 .reveal-right {
     opacity: 0;
-    transform: translateX(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transform: translateX(50px);
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
 }
 .reveal-right.visible {
     opacity: 1;
     transform: translateX(0);
 }
 
-.reveal-scale {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+.stagger-delay:nth-child(1) { transition-delay: 100ms; }
+.stagger-delay:nth-child(2) { transition-delay: 200ms; }
+.stagger-delay:nth-child(3) { transition-delay: 300ms; }
+.stagger-delay:nth-child(4) { transition-delay: 400ms; }
+
+/* Keyframes */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
-.reveal-scale.visible {
-    opacity: 1;
-    transform: scale(1);
+.animate-float {
+    animation: float 4s ease-in-out infinite;
 }
 
-
-/* Keyframes (kept for simpler use cases) */
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 10px rgba(212, 175, 55, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(212, 175, 55, 0.6); }
+}
+.animate-glow {
+    animation: pulse-glow 2s infinite;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
 }
-
-@keyframes slideInRight {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
-
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+::-webkit-scrollbar-thumb {
+    background: var(--color-maroon);
+    border-radius: 4px;
 }
-
-.animate-fade-in {
-    animation: fadeIn 1s ease-out forwards;
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-maroon-dark);
 }
-
-.animate-slide-in-right {
-    animation: slideInRight 0.8s ease-out forwards;
-}
-
-/* Hover Effects */
-.hover-scale {
-    transition: transform 0.3s ease;
-}
-.hover-scale:hover {
-    transform: scale(1.03);
-}
-
-/* Custom Utilities */
-.text-maroon { color: #800000; }
-.bg-maroon { background-color: #800000; }
-.text-gold { color: #d4af37; }
-.bg-gold { background-color: #d4af37; }
-.border-gold { border-color: #d4af37; }
