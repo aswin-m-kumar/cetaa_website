@@ -1,13 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cetaa-website</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CETAA - College of Engineering Trivandrum Alumni Association</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative h-[90vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 bg-gray-900">
+                <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="College Campus" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 text-center text-white px-4 max-w-5xl mx-auto reveal-up">
+                <div class="mb-6 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-yellow-500/50 bg-yellow-500/10 text-yellow-400 text-sm font-medium tracking-wider uppercase">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> Established July 3, 1939
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    The First Engineering College <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">of Travancore State</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
+                    Founded during the reign of Sree Chithira Thirunal Balarama Varma. <br/>
+                    Celebrating over 85 years of engineering excellence and global alumni bonding.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="renovation.html" class="px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 bg-gold text-maroon hover:bg-yellow-400">
+                        <i data-lucide="heart" class="w-5 h-5"></i> Renovation 2026
+                    </a>
+                    <a href="https://alumni.cet.ac.in" target="_blank" class="px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1 bg-white text-gray-900 hover:bg-gray-100">
+                        Member Login
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <div class="bg-white py-12 shadow-xl relative z-20 -mt-16 mx-4 md:mx-20 rounded-2xl flex flex-wrap justify-around text-center border-b-4 border-maroon reveal-up" style="transition-delay: 200ms;">
+            <div class="p-4 w-1/2 md:w-1/4 group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 mx-auto mb-3 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
+                    <i data-lucide="globe" class="w-6 h-6 text-red-900 group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-1">50,000+</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wide">Alumni Worldwide</p>
+            </div>
+            <div class="p-4 w-1/2 md:w-1/4 group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 mx-auto mb-3 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
+                    <i data-lucide="map-pin" class="w-6 h-6 text-red-900 group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-1">25+</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wide">Chapters</p>
+            </div>
+            <div class="p-4 w-1/2 md:w-1/4 group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 mx-auto mb-3 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
+                    <i data-lucide="award" class="w-6 h-6 text-red-900 group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-1">₹2 Cr+</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wide">Scholarships</p>
+            </div>
+            <div class="p-4 w-1/2 md:w-1/4 group hover:-translate-y-1 transition-transform duration-300">
+                <div class="w-12 h-12 mx-auto mb-3 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
+                    <i data-lucide="building" class="w-6 h-6 text-red-900 group-hover:text-white transition-colors"></i>
+                </div>
+                <h3 class="text-3xl font-bold text-gray-900 mb-1">85 Years</h3>
+                <p class="text-gray-500 font-medium text-sm uppercase tracking-wide">Legacy</p>
+            </div>
+        </div>
+
+        <!-- About Brief -->
+        <section id="about" class="py-20 px-4 bg-gray-50">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal-left">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-100 rounded-full -z-10"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-red-50 rounded-full -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Students" class="rounded-2xl shadow-2xl w-full">
+                </div>
+                <div class="reveal-right">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">A Legacy Since 1939</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed text-lg">
+                        The College of Engineering, Trivandrum was established in 1939 as the first Engineering College in the then Travancore State. The first classes were started on 3rd July 1939. Initially, the College was housed in the former office and bungalow of the Chief Engineer (present PMG Office).
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+                         CETAA continues to foster this legacy, connecting alumni globally to support the institution that shaped us.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                         <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                           <i data-lucide="users" class="w-5 h-5 text-red-900 mr-3"></i> Global Networking
+                         </div>
+                         <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                           <i data-lucide="target" class="w-5 h-5 text-red-900 mr-3"></i> Student Mentorship
+                         </div>
+                         <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                           <i data-lucide="building" class="w-5 h-5 text-red-900 mr-3"></i> Infra Support
+                         </div>
+                         <div class="flex items-center p-3 bg-white rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                           <i data-lucide="heart" class="w-5 h-5 text-red-900 mr-3"></i> Social Initiatives
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
 </html>
